@@ -1,0 +1,73 @@
+<div *ngIf="pokemon != null">
+    <!--
+    <h4>{{ pokemon.nome }}</h4>
+    <br />
+    <p> Tipo: {{ pokemon.tipo }}</p>
+    <p> Level: {{ pokemon.level }}</p>
+    <p> Gênero: {{ pokemon.genero }}</p>
+    <p> Ataques: {{ pokemon.ataques }}</p>
+    <div> Ataques:
+        <div *ngIf="pokemon.ataques != null">
+            <div *ngFor="let ataque of pokemon.ataques; let i = index">
+                {{ pokemon.ataques[i] }}
+            </div>
+        </div>
+    </div>
+    <br />
+    <p>Evolução: {{ pokemon.evolucao }}</p>
+    <p>Pré-evoluçao: {{ pokemon.preEvolucao }}</p>
+    -->
+    <table class="table">
+        <tbody>
+            <tr>
+                <th scope="row">Nome</th>
+                <td>{{ pokemon.nome }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Tipo</th>
+                <td>
+                    <div class="d-flex justify-content-start">
+                        <div *ngFor="let tp of pokemon.tipo">
+                            <div *ngIf="tp != '' && tp != null" id="tipo" [class]="tp.toLowerCase()">
+                                {{ tp }}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Level</th>
+                <td>{{ pokemon.level }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Gênero</th>
+                <td>
+                    <div [ngSwitch]="pokemon.genero">
+                        <div *ngSwitchCase="'true'" id="genero" class="d-flex justify-content-start macho">
+                            Macho <i class="fa fa-mars ml-2"> </i>
+                        </div>
+                        <div *ngSwitchCase="'false'" id="genero" class="d-flex justify-content-start femea">
+                            Femea <i class="fa fa-venus ml-2"> </i>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Ataques</th>
+                <td>
+                    <div *ngFor="let atk of pokemon.ataques">
+                        {{ atk }}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Evolução</th>
+                <td>{{ pokemon.evolucao }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Pré-evolução</th>
+                <td>{{ pokemon.preEvolucao }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

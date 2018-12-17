@@ -1,0 +1,103 @@
+<!--
+<div class="row">
+  <div class="col-6">
+    <div class="list-group">
+      <div class="d-flex justify-content-between">
+        <a class="list-group-item list-group-item-action" *ngFor="let pokemon of pokemons" [routerLink]="['detalhe', pokemon.id]">
+          {{ pokemon.nome }}
+          <button type="button" class="btn btn-success" [routerLink]="['adicionar']">
+            +
+          </button>
+        </a>
+      </div>
+      <div class="list-group-item d-flex justify-content-end">
+        <button type="button" class="btn btn-success" [routerLink]="['adicionar']">
+          +
+        </button>
+      </div>
+    </div>
+  </div>
+  <div clas="col-6">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+-->
+
+<div class="row">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Level</th>
+          <th scope="col">Genero</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pokemon of pokemons">
+          <th scope="row" class="align-middle">{{ pokemon.id }}</th>
+          <td class="align-middle">{{ pokemon.nome }}</td>
+          <td class="align-middle">{{ pokemon.level }}</td>
+          <td class="align-middle">
+            <div *ngIf="pokemon.genero == 'true'">
+              <i class="fa fa-mars"></i>
+            </div>
+            <div *ngIf="pokemon.genero == 'false'">
+              <i class="fa fa-venus"></i>
+            </div>
+          </td>
+          <td>
+            <button type="button" class="btn btn-success " [routerLink]="['detalhe', pokemon.id]">
+              <i class="fa fa-search"></i>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary" [routerLink]="['editar', pokemon.id]">
+              <i class="fa fa-edit"></i>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger" (click)="excluirPokemon(pokemon.id, pokemon.nome)">
+              <i class="fa fa-trash-o"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <button type="button" class="btn btn-warning" [routerLink]="['adicionar']">
+              <i class="fa fa-plus"></i>
+            </button>
+          </th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-6">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!--
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true">
+      <img [ngClass]="giro" (click)="girar()" src="..\..\..\assets\pokebola2.png" />
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
+<img [ngClass]="giro" (click)="girar()" src="..\..\..\assets\pokebola2.png" />
+-->

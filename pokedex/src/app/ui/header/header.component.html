@@ -1,0 +1,25 @@
+<!--
+<nav class="nav nav-pills nav-justified m-1 mx-3">
+  <a class="nav-link" [routerLink]="['/principal']" routerLinkActive="active">Lista</a>
+  <a class="nav-link" [routerLink]="['/sobre']" routerLinkActive="active">Sobre</a>
+</nav>
+-->
+
+<div class="d-flex justify-content-center">
+  <div class="dropdown">
+    <img class="maior dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" [ngClass]="giro" (click)="girar()"
+      src="..\..\..\assets\pokebola2.png" />
+    <div class="dropdown-menu">
+      <nav class="nav nav-pills nav-justified m-1 mx-3">
+        <a class="nav-link" [routerLink]="['/principal']" routerLinkActive="active">
+          <img src="..\..\..\assets\pokebola2.png" class="menor" />
+          Principal
+        </a>
+        <a class="nav-link" [routerLink]="['/sobre']" routerLinkActive="active">
+          <img src="..\..\..\assets\pokebola2.png" class="menor" />
+          Sobre
+        </a>
+      </nav>
+    </div>
+  </div>
+</div>

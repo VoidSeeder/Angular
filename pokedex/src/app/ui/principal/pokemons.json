@@ -1,0 +1,70 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "nome": "Charizard",
+      "tipo": [
+        "Fogo",
+        "Voador"
+      ],
+      "level": "12",
+      "genero": "true",
+      "ataques": [
+        "Tornado",
+        "Bola de fogo",
+        "Garras de metal",
+        "Queimar"
+      ],
+      "evolucao": "Mega-Charizard",
+      "preEvolucao": "Charmeleon"
+    },
+    {
+      "id": 2,
+      "nome": "Pikachu",
+      "tipo": [
+        "Elétrico",
+        null
+      ],
+      "level": "30",
+      "genero": "false",
+      "ataques": [
+        "Choque do trovão",
+        "Carregar",
+        "Eletrocutar"
+      ],
+      "evolucao": "Raichu",
+      "preEvolucao": "Pichu"
+    },
+    {
+      "id": 3,
+      "nome": "Rattata",
+      "tipo": [
+        "Normal",
+        null
+      ],
+      "level": "12",
+      "genero": "true",
+      "ataques": [
+        "Arranhar",
+        "Bater"
+      ],
+      "evolucao": "Raticate",
+      "preEvolucao": null
+    },
+    {
+      "id": 4,
+      "nome": "Sandshrew",
+      "tipo": [
+        "Terra",
+        null
+      ],
+      "level": "30",
+      "genero": "false",
+      "ataques": [
+        null
+      ],
+      "evolucao": null,
+      "preEvolucao": null
+    }
+  ]
+}

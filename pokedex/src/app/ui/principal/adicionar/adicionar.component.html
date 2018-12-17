@@ -1,0 +1,91 @@
+<div class="nav justify-content-center">
+    <h2>Adicionar novo Pokemon</h2>
+</div>
+<!--
+<h5>Nome: <input type="text" [(ngModel)]="pokemon.nome" /></h5>
+<h5>Tipo:
+    <div *ngFor="let tipo of pokemon.tipo; let i = index">
+        <input type="text" [(ngModel)]="tp[i]" />
+    </div>
+</h5>
+<h5>Level: <input type="text" [(ngModel)]="pokemon.level" /></h5>
+<h5>Genero:
+    <input type="radio" [(ngModel)]="pokemon.genero" value='true'> <i class="fa fa-mars"></i> <br />
+    <input type="radio" [(ngModel)]="pokemon.genero" value='false'> <i class="fa fa-venus"></i>
+</h5>
+<h5>Ataques:
+    <div *ngFor="let ataque of pokemon.ataques; let i = index">
+        <input type="text" [(ngModel)]="atk[i]" />
+    </div>
+    <button type="button" class="btn btn-primary" (click)="incrementarAtaques()">
+        <i class="fa fa-plus"></i>
+    </button>
+</h5>
+<h5>Evolução: <input type="text" [(ngModel)]="pokemon.evolucao" /></h5>
+<h5>Pré-evolução: <input type="text" [(ngModel)]="pokemon.preEvolucao" /></h5>
+<button class="btn btn-primary" (click)="post()">Adicionar</button>
+-->
+
+<table class="table">
+    <tr>
+        <th scope="row">Nome</th>
+        <td><input type="text" [(ngModel)]="pokemon.nome" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">Tipo</th>
+        <td>
+            <div *ngFor="let tipo of pokemon.tipo; let i = index">
+                <input type="text" [(ngModel)]="tp[i]" />
+            </div>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">Level</th>
+        <td><input type="text" [(ngModel)]="pokemon.level" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">Gênero</th>
+        <td>
+            <div class="d-flex justify-content-around">
+                <label class="btn active" [ngClass]="{'btn-primary': pokemon.genero == 'true', 'btn-secondary': pokemon.genero == 'false' || pokemon.genero == null}">
+                    <input hidden type="radio" [(ngModel)]="pokemon.genero" value='true'>
+                    <i class="fa fa-mars"></i>
+                </label>
+                <label class="btn active" [ngClass]="{'btn-primary': pokemon.genero == 'false', 'btn-secondary': pokemon.genero == 'true' || pokemon.genero == null}">
+                    <input hidden type="radio" [(ngModel)]="pokemon.genero" value='false'>
+                    <i class="fa fa-venus"></i>
+                </label>
+            </div>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">Ataques</th>
+        <td>
+            <div *ngFor="let ataque of pokemon.ataques; let i = index">
+                <input type="text" [(ngModel)]="atk[i]" />
+            </div>
+        </td>
+        <td>
+            <button type="button" class="btn btn-primary" (click)="incrementarAtaques()">
+                <i class="fa fa-plus"></i>
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Evolução</th>
+        <td><input type="text" [(ngModel)]="pokemon.evolucao" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">Pré-evolução</th>
+        <td><input type="text" [(ngModel)]="pokemon.preEvolucao" /></td>
+        <td></td>
+    </tr>
+</table>
+<div class="nav justify-content-center">
+    <button class="btn btn-primary" (click)="post()">Adicionar</button>
+</div>

@@ -1,0 +1,22 @@
+<h5>Cirar/Editar aluno</h5>
+
+<div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input disabled [(ngModel)]="aluno.id" id="id" type="number">
+      <label for="id">Identificação</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input [(ngModel)]="aluno.nome" id="nome" type="text">
+      <label for="nome">Nome</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input [(ngModel)]="aluno.email" id="email" type="email">
+      <label for="email">E-mail</label>
+    </div>
+  </div>
+</div>

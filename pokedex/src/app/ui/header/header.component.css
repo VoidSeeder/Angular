@@ -1,0 +1,27 @@
+.rotate
+{
+    transform: rotateZ(360deg);
+    transition: all 1.0s ease;
+}
+
+img.maior {
+    filter: contrast(200%) brightness(80%);
+    height: 100px;
+    width: 100px;
+}
+
+img.menor {
+    /*filter: contrast(200%) brightness(80%);*/
+    height: 20px;
+    width: 20px;
+    background-color: darkgray;
+    border-radius: 15px;
+}
+
+a.active {
+    background-color: firebrick !important;
+}
+
+a.nav-link:not(.active) {
+    color: black !important;
+}

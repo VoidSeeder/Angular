@@ -1,0 +1,59 @@
+th, td {
+    vertical-align: middle;
+}
+
+th, td {
+    width: 50%;
+}
+
+#tipo, #genero {
+    padding: 5px 5px;
+    margin: 2px 2px;
+    width: min-content;
+    border-radius: 10px;
+    color: white;
+}
+
+.macho {
+    background-color: darkblue;
+}
+
+.femea {
+    background-color: fuchsia;
+}
+
+.normal {
+    background-color: peru;
+}
+
+.lutador {
+    background-color: darkred;
+}
+
+.voador {
+    background-color: steelblue;
+}
+
+.veneno {
+    background-color: blueviolet;
+}
+
+.terra {
+    background-color: darkgoldenrod;
+}
+
+.terra {
+    background-color: dimgray;
+}
+
+.inseto {
+    background-color: darkolivegreen;
+}
+
+.elétrico {
+    background-color: #FFBF00;
+}
+
+.fogo {
+    background-color: darkorange;
+}

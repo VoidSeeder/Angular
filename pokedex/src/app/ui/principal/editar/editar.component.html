@@ -1,0 +1,68 @@
+<div class="nav justify-content-center">
+  <h2>Editar Pokemon</h2>
+</div>
+<div *ngIf="pokemon != null">
+  <table class="table">
+    <tr>
+      <th scope="row">Nome</th>
+      <td><input type="text" [(ngModel)]="pokemon.nome" /></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Tipo</th>
+      <td>
+        <div *ngFor="let tipo of pokemon.tipo; let i = index">
+          <input type="text" [(ngModel)]="tp[i]" />
+        </div>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Level</th>
+      <td><input type="text" [(ngModel)]="pokemon.level" /></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Gênero</th>
+      <td>
+        <div class="d-flex justify-content-around" *ngIf="pokemon.genero != null">
+          <label class="btn active" [ngClass]="{'btn-primary': pokemon.genero == 'true', 'btn-secondary': pokemon.genero == 'false'}">
+            <input hidden type="radio" [(ngModel)]="pokemon.genero" value='true'>
+            <i class="fa fa-mars"></i>
+          </label>
+          <label class="btn active" [ngClass]="{'btn-primary': pokemon.genero == 'false', 'btn-secondary': pokemon.genero == 'true'}">
+            <input hidden type="radio" [(ngModel)]="pokemon.genero" value='false'>
+            <i class="fa fa-venus"></i>
+          </label>
+        </div>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Ataques</th>
+      <td>
+        <div *ngFor="let ataque of pokemon.ataques; let i = index">
+          <input type="text" [(ngModel)]="atk[i]" />
+        </div>
+      </td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="incrementarAtaques()">
+          <i class="fa fa-plus"></i>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Evolução</th>
+      <td><input type="text" [(ngModel)]="pokemon.evolucao" /></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Pré-evolução</th>
+      <td><input type="text" [(ngModel)]="pokemon.preEvolucao" /></td>
+      <td></td>
+    </tr>
+  </table>
+  <div class="nav justify-content-center">
+    <button class="btn btn-primary" (click)="editarPokemon()">Editar</button>
+  </div>
+</div>

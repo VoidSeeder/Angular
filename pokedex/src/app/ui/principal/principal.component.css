@@ -1,0 +1,17 @@
+.btn {
+    color: white !important;
+}
+
+.rotate
+{
+    -webkit-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+    transition: all 1.0s ease;
+}
+
+img {
+    filter: contrast(200%) brightness(80%);
+    height: 50px;
+    width: 50px;
+}
